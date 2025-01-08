@@ -14,9 +14,6 @@ WORKDIR /app
 
 COPY --from=builder /app/main .
 
-# Copy .env file
-COPY .env .env
-
 EXPOSE ${PORT:-8080}
 
 # Set default values for environment variables
